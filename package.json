@@ -1,0 +1,10 @@
+{
+  "name": "kuziya-signaling",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node --check server.mjs && node --check online.mjs && node --check public/room.js && node --check public/online.js",
+    "start": "node server.mjs --online"
+  }
+}

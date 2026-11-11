@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuziya · Интернет-комнаты</title>
+  <link rel="stylesheet" href="/room.css">
+  <script type="module" src="/online.js"></script>
+</head>
+<body class="online-page">
+  <main class="online-home">
+    <div class="online-panel">
+      <header class="room-brand"><span class="brand-symbol" aria-hidden="true">K</span><h1>Kuziya</h1></header>
+      <p id="local-only" hidden>Публичный сервис сейчас недоступен. Вставьте свежую ссылку-приглашение или откройте новый адрес сервиса.</p>
+      <p><button id="create" type="button">Создать комнату</button></p>
+      <form id="lookup">
+        <label for="code">Код комнаты или ссылка-приглашение</label>
+        <div class="controls">
+          <input id="code" required maxlength="300" size="32" autocomplete="off" spellcheck="false">
+          <button>Подключиться</button>
+        </div>
+      </form>
+      <details id="service-settings" hidden>
+        <summary>Открыть новый адрес сервиса</summary>
+        <form id="service">
+          <label for="endpoint">HTTPS-адрес Kuziya</label>
+          <input id="endpoint" type="url" required placeholder="https://…">
+          <button>Открыть</button>
+        </form>
+      </details>
+      <p id="message" role="status"></p>
+    </div>
+  </main>
+</body>
+</html>

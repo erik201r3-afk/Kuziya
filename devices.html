@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Myrlo Voice</title>
+  <link rel="stylesheet" href="/room.css">
+  <script type="module" src="/devices.js"></script>
+</head>
+<body>
+  <main>
+    <header><h1>Myrlo Voice</h1><a href="/internet" target="_blank" rel="noopener">Звонок через интернет</a></header>
+    <label for="device">Ваш ID устройства</label>
+    <div class="controls">
+      <input id="device" size="32" readonly>
+      <button id="copy" type="button">Скопировать ID</button>
+    </div>
+    <p class="controls">
+      <button id="host" type="button">Создать комнату</button>
+      <button id="stop" type="button" hidden>Закрыть комнату</button>
+    </p>
+    <form id="find">
+      <label for="friend">ID друга</label>
+      <div class="controls">
+        <input id="friend" size="32" required autocomplete="off" spellcheck="false">
+        <button>Подключиться</button>
+      </div>
+      <p><label for="address">IPv4 друга, если поиск в LAN его не видит</label>
+        <input id="address" placeholder="Например, 26.12.34.56" autocomplete="off">
+      </p>
+    </form>
+    <p id="result" role="status"></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kuziya-signaling
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /online/health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0

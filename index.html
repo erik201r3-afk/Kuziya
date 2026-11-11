@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuziya</title>
+  <link rel="stylesheet" href="/room.css">
+  <script type="module" src="/room.js"></script>
+</head>
+<body class="room-page">
+  <main class="room-shell">
+    <header class="room-header">
+      <div class="room-brand"><span class="brand-symbol" aria-hidden="true">K</span><h1>Kuziya</h1></div>
+      <div class="room-tools">
+      <a id="devices" href="/devices" hidden>К устройствам</a>
+      <button id="close-room" type="button" hidden>Закрыть комнату</button>
+      <button id="invite" type="button">Скопировать приглашение</button>
+      <button id="invite-link" type="button" hidden>Скопировать ссылку</button>
+      </div>
+    </header>
+    <form id="join">
+      <label for="name">Ваше имя</label>
+      <div class="controls">
+        <input id="name" required maxlength="32" autocomplete="nickname">
+        <button>Войти в комнату</button>
+      </div>
+    </form>
+    <div class="room-status">
+      <p id="status" role="status">Комната на 4 человека</p>
+      <button id="retry" type="button" hidden>Переподключить связь</button>
+    </div>
+    <section id="peers" aria-label="Участники"></section>
+    <div class="controls room-actions" id="actions" hidden>
+      <button id="mic" type="button">Включить микрофон</button>
+      <button id="share" type="button">Показать экран</button>
+      <button id="leave" type="button">Выйти</button>
+    </div>
+  </main>
+</body>
+</html>
+
